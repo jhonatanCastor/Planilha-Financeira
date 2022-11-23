@@ -28,57 +28,58 @@ export const InputArea = ({ onAdd }: Props) => {
         console.log("teste no campo de data", cate);
         console.log(title);
         console.log(value);
-        
-    }
 
+    }
 
     return (
         <C.Container>
             <form onSubmit={cadastrarDados}>
-                <C.Button onClick={handleAddEvent}>
-                    Adicionar
-                </C.Button>
 
-                <C.Date>
+                <C.Datei>
+                    
+                    <C.Date>
                     <label htmlFor="Data">Data:</label>
-                    <input
-                        type="date"
-                        name="Data"
-                        id="Data"
-                        onChange={(e) => setData_at(new Date(e.target.value))}
-                    />
-                </C.Date>
+                        <input
+                            type="date"
+                            name="Data"
+                            id="Data"
+                            onChange={(e) => setData_at(new Date(e.target.value))}
+                        />
+                    </C.Date>
 
-                <C.Cate>
-                    <label htmlFor="cate">Categoria</label>
-                    <input
-                        type="text"
-                        name="cate"
-                        id="cate"
-                        onChange={(e) => setCate((e.target.value))}
-                    />
-                </C.Cate>
+                    <C.Cate>
+                        <label htmlFor="cate">Categoria</label>
+                        <input
+                            type="text"
+                            name="cate"
+                            id="cate"
+                            onChange={(e) => setCate((e.target.value))}
+                        />
+                    </C.Cate>
 
-                <C.Title>
-                    <label htmlFor='title'>Title</label>
-                    <input 
-                    type="text" 
-                    name="title" 
-                    id="title" 
-                    onChange={(e) => setTitle((e.target.value))}
-                    />
-                </C.Title>
+                    <C.Title>
+                        <label htmlFor='title'>Title</label>
+                        <input
+                            type="text"
+                            name="title"
+                            id="title"
+                            onChange={(e) => setTitle((e.target.value))}
+                        />
+                    </C.Title>
 
-                <C.Value>
-                    <label htmlFor="value">R$:</label>
-                    <input 
-                    type="number" 
-                    name='value' 
-                    id='value'
-                    onChange={(e) => setValue(new Number(e.target.value))}
-                     />
-                </C.Value>
-
+                    <C.Value>
+                        <label htmlFor="value">R$:</label>
+                        <input
+                            type="number"
+                            name='value'
+                            id='value'
+                            onChange={(e) => setValue(new Number(e.target.value))}
+                        />
+                    </C.Value>
+                    <C.Button onClick={handleAddEvent}>
+                        Adicionar
+                    </C.Button>
+                </C.Datei>
             </form>
 
 
